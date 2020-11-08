@@ -5,20 +5,20 @@ function DetailsModal({ show, handleClose, country = '' }) {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>{country.Country_Region}</Modal.Title>
+        <Modal.Title>{country.location}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-      <h5>{`Total Cases: ${country.Confirmed}`}</h5>
-      <h6>{`Total Deaths: ${country.Deaths}`}</h6>
-      <h6>{`Total Recovered: ${country.Recovered}`}</h6>
+        <h5>{`Total Cases: ${country.confirmed}`}</h5>
+        <h6>{`Total Deaths: ${country.deaths}`}</h6>
+        <h6>{`Total Recovered: ${country.recovered}`}</h6>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="danger" onClick={handleClose}>
+        <Button variant='danger' onClick={handleClose}>
           Close
-    </Button>
+        </Button>
       </Modal.Footer>
     </Modal>
-  )
+  );
 }
 
-export default DetailsModal
+export default DetailsModal;
