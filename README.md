@@ -7,4 +7,5 @@ This app shows an up-to-date statistics of COVID-19 cases, the data comes from F
 #### Technologies used
 I used HTML, CSS, React, Hooks, React-bootstrap, NodeJS, Express.
 
-#### Not yet hosted, I am working on it now
+#### Website
+The site is now hosted via Heroku, and you can visit the app at https://jsproject1902459.herokuapp.com/
