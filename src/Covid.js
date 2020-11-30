@@ -34,10 +34,15 @@ function Covid() {
   const [totalRecovered, setTotalRecovered] = useTotalState('recovered');
   const [totalDeaths, setTotalDeath] = useTotalState('death');
 
+  const BASE_API_URL =
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3131/stat'
+      : '/stat';
+
   useEffect(() => {
     async function getData() {
       await axios
-        .get('http://localhost:3131/')
+        .get(BASE_API_URL)
         .then((resp) => {
           return resp.data;
         })

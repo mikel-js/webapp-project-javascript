@@ -9,7 +9,7 @@ app.use(express.static(buildPath));
 
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/stat', (req, res) => {
   axios
     .get('https://covid2019-api.herokuapp.com/v2/current')
     .then((resp) => {
